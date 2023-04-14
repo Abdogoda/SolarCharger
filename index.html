@@ -19,21 +19,20 @@
   <!-- start landing section -->
   <main>
    <nav>
-    <div id="logo">
-     <img
-      src=".//images/logo.png"
-      alt=""
-      style="width: 141px; height: 65px; border-radius: 11px"
-     />
+    <div class="container">
+     <div id="logo">
+      <img src=".//images/logo.png" alt="logo" />
+     </div>
+     <ul>
+      <li><a href="#">HOME</a></li>
+      <li><a href="#about">ABOUT US</a></li>
+      <li><a href="#team">OUR TEAM</a></li>
+      <li><a href="proposal.html">ABOUT THE DEVICE</a></li>
+      <li><a href="#">SURVICES</a></li>
+      <li><a href="#">LOGIN</a></li>
+     </ul>
+     <i class="fa fa-bars" onclick="navToggler()"></i>
     </div>
-    <ul>
-     <li><a href="#">HOME</a></li>
-     <li><a href="#about">ABOUT US</a></li>
-     <li><a href="#team">OUR TEAM</a></li>
-     <li><a href="proposal.html">ABOUT THE DEVICE</a></li>
-     <li><a href="#">SURVICES</a></li>
-     <li><a href="#">LOGIN</a></li>
-    </ul>
    </nav>
    <div class="container">
     <div id="name-of-project"></div>
@@ -196,7 +195,6 @@
    var text = " MULTI CAHARGING SYSTEM BASED ON RENEWABLE ENERGY ";
    var speed = 200; // milliseconds
    var i = 0;
-
    function type() {
     if (i < text.length) {
      document.getElementById("name-of-project").innerHTML += text.charAt(i);
@@ -204,9 +202,18 @@
      setTimeout(type, speed);
     }
    }
-
    type();
+
+   //nav toggler
+   document.querySelectorAll("nav ul li").forEach((li) => {
+    li.addEventListener("click", () => {
+     navToggler();
+    });
+   });
+   function navToggler() {
+    document.querySelector("nav i.fa-bars").classList.toggle("active");
+    document.querySelector("nav ul").classList.toggle("active");
+   }
   </script>
-  <script src="./main.js"></script>
  </body>
 </html>
