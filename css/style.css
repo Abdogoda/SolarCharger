@@ -499,7 +499,7 @@ hr {
 }
 @media (max-width: 500px) {
  #name-of-project {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   max-width: 95%;
  }
  .container h1 {
@@ -511,6 +511,6 @@ hr {
   font-size: 1.3rem;
  }
  .team .container .all .person .image {
-  height: 250px;
+  height: 350px;
  }
 }
